@@ -1,0 +1,39 @@
+---
+layout: post
+title: "mongdodb"
+description: "常用命令"
+category: "记事本"
+category-substitution: 原创
+tags: [grunt]
+---
+
+#mongodb
+
+db.users.find({name:"test"})
+db.users.remove({name:"test"})
+
+db.users.find().forEach( function(myDoc) { print( "user: " + myDoc.name ); } );
+
+db.users.find().map( function(u) { var o = new Object(); o.name = u.name; return o; } );
+db.users.ensureIndex( {"name": "text"} )
+db.users.find( { $text: { $search: "test"}})
+
+db.users.find({"name": /.*m.*/})
+
+db.users.update({"name": "admin"},{$set:{"fullname":"李金标"}})
+
+db.groups.insert({name:"ued",members:"admin;chanpingou"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
