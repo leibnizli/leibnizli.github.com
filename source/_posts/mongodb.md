@@ -7,11 +7,9 @@ category-substitution: 原创
 tags: [grunt]
 ---
 
-#mongodb
-
 db.users.find({name:"test"})
 db.users.remove({name:"test"})
-
+<!-- more -->
 db.users.find().forEach( function(myDoc) { print( "user: " + myDoc.name ); } );
 
 db.users.find().map( function(u) { var o = new Object(); o.name = u.name; return o; } );

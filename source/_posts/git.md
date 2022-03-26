@@ -20,7 +20,7 @@ tags: [git]
     clear  #清屏
     vim <file>  用vim编辑器的方式打开文件
     cat <file> 查看文件内容
-
+<!-- more -->
 ## git config
 
 Git需要用户提供若干信息。通过`git config`命令，可以把用户信息提供给本地版本库。

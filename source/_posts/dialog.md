@@ -7,39 +7,42 @@ category-substitution: 原创
 tags: [html]
 ---
 
-###运行条件
+### 运行条件
 
 chrome版本>31，在地址栏输入`chrome://flags`，`Enable experimental Web Platform features`(打开启用实验性网络平台功能)
+<!-- more -->
 
-    <style>
-    dialog {
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 6px;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    }
-    dialog::backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-    </style>
-    <dialog>
-        <p>This is da dialog!</p>
-        <button id="close">Close</button>
-    </dialog>
-    <button id="show">Open Dialog!</button>
-    <script>
-        var dialog = document.querySelector('dialog');
-        document.querySelector('#show').onclick = function() {
-            dialog.showModal();
-            //dialog.show();
-        };
-        document.querySelector('#close').onclick = function() {
-            dialog.close();
-        };
-    </script>
+```html
+<style>
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+dialog::backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+</style>
+<dialog>
+    <p>This is da dialog!</p>
+    <button id="close">Close</button>
+</dialog>
+<button id="show">Open Dialog!</button>
+<script>
+    var dialog = document.querySelector('dialog');
+    document.querySelector('#show').onclick = function() {
+        dialog.showModal();
+        //dialog.show();
+    };
+    document.querySelector('#close').onclick = function() {
+        dialog.close();
+    };
+</script>
+```
 
 * `dialog.show()`显示dialog
 * `dialog.close()`关闭dialog

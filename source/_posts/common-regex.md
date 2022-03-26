@@ -46,7 +46,7 @@ tags: [JavaScript]
         </tr>
     </tbody>
 </table>
-
+<!-- more -->
 <table cellspacing="0">
     <caption>表2.常用的限定符</caption>
     <thead>
