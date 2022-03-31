@@ -1,0 +1,19 @@
+---
+layout: default
+title: Home
+---
+<h1>{{ "Just a blog!" | downcase }}</h1>
+
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+    </li>
+    {% endfor %}
+</ul>
+<hr />
+<ul>
+    <li><a href="https://github.com/leibnizli">github</a></li>
+    <li><a href="https://gotomorrow.dev">gotomorrow.dev</a></li>
+</ul>
